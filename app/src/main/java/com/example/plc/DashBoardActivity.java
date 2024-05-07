@@ -37,7 +37,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Software Details button click
                 // Example: Navigate to SoftwareDetailsActivity
-//                startActivity(new Intent(DashboardActivity.this, SoftwareDetailsActivity.class));
+                startActivity(new Intent(DashboardActivity.this, activity_softwaredetails.class));
             }
         });
 
@@ -46,7 +46,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Hardware Details button click
                 // Example: Navigate to HardwareDetailsActivity
-//                startActivity(new Intent(DashboardActivity.this, HardwareDetailsActivity.class));
+                startActivity(new Intent(DashboardActivity.this, HardwareDetailsActivity.class));
             }
         });
 
@@ -55,7 +55,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Configure button click
                 // Example: Navigate to ConfigureActivity
-//                startActivity(new Intent(DashboardActivity.this, ConfigureActivity.class));
+                startActivity(new Intent(DashboardActivity.this, Configuration.class));
             }
         });
     }

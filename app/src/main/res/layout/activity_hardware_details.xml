@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <TextView
+        android:id="@+id/serialNoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serial Number:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/serialNoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234567890"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/serialNoLabel"
+        app:layout_constraintTop_toBottomOf="@id/serialNoLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/macAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAC Address:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/serialNoTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/macAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:11:22:33:44:55"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/macAddressLabel"
+        app:layout_constraintTop_toBottomOf="@id/macAddressLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/firmwareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firmware:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/macAddressTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/firmwareTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0.0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/firmwareLabel"
+        app:layout_constraintTop_toBottomOf="@id/firmwareLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/hardwareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hardware:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firmwareTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/hardwareTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X-100"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/hardwareLabel"
+        app:layout_constraintTop_toBottomOf="@id/hardwareLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/currentModeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Mode:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hardwareTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/currentModeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/currentModeLabel"
+        app:layout_constraintTop_toBottomOf="@id/currentModeLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/versionHardwareLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version Hardware:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentModeTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/versionHardwareTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/versionHardwareLabel"
+        app:layout_constraintTop_toBottomOf="@id/versionHardwareLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/versionLogicLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version Logic:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/versionHardwareTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/versionLogicTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.5"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/versionLogicLabel"
+        app:layout_constraintTop_toBottomOf="@id/versionLogicLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/mlpiServerCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MLPI Server Code:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/versionLogicTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/mlpiServerCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MLPI-1234"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/mlpiServerCodeLabel"
+        app:layout_constraintTop_toBottomOf="@id/mlpiServerCodeLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/versionBspLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version BSP:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mlpiServerCodeTextView"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/versionBspTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.2.1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/versionBspLabel"
+        app:layout_constraintTop_toBottomOf="@id/versionBspLabel"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
