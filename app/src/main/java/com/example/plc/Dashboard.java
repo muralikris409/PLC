@@ -1,12 +1,16 @@
 package com.example.plc;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-class DashboardActivity extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity {
 
     private Button controlButton;
     private Button softwareDetailsButton;
@@ -16,7 +20,14 @@ class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dash_board);
+        setContentView(R.layout.activity_dashboard);
+        TextView ip=findViewById(R.id.ip);
+        new Handler().postDelayed ( new Runnable () {
+            @Override
+            public void run() {
+                ip.setText ( getIntent ().getStringExtra ( "ip" ) );
+            }
+        },1000 );
 
         controlButton = findViewById(R.id.controlButton);
         softwareDetailsButton = findViewById(R.id.softwareDetailsButton);
@@ -26,9 +37,8 @@ class DashboardActivity extends AppCompatActivity {
         controlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle Control button click
-                // Example: Navigate to ControlActivity
-//                startActivity(new Intent(DashboardActivity.this, ControlActivity.class));
+
+                startActivity(new Intent(Dashboard.this, Configuration.class));
             }
         });
 
@@ -37,7 +47,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Software Details button click
                 // Example: Navigate to SoftwareDetailsActivity
-                startActivity(new Intent(DashboardActivity.this, activity_softwaredetails.class));
+                startActivity(new Intent(Dashboard.this, activity_softwaredetails.class));
             }
         });
 
@@ -46,7 +56,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Hardware Details button click
                 // Example: Navigate to HardwareDetailsActivity
-                startActivity(new Intent(DashboardActivity.this, HardwareDetailsActivity.class));
+                startActivity(new Intent(Dashboard.this, HardwareDetailsActivity.class));
             }
         });
 
@@ -55,7 +65,7 @@ class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle Configure button click
                 // Example: Navigate to ConfigureActivity
-                startActivity(new Intent(DashboardActivity.this, Configuration.class));
+                startActivity(new Intent(Dashboard.this, Configuration.class));
             }
         });
     }

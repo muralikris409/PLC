@@ -22,13 +22,16 @@ public class IpAddressActivity extends AppCompatActivity {
 
         ipAddressEditText = findViewById(R.id.ipAddressEditText);
         connectButton = findViewById(R.id.connectButton);
+        Intent i=new Intent (IpAddressActivity.this,Dashboard.class);
 
         connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String ipAddress = ipAddressEditText.getText().toString().trim();
+
                 if (!ipAddress.isEmpty()) {
-                    startActivity ( new Intent (IpAddressActivity.this,DashboardActivity.class) );
+                    i.putExtra ("ip", ipAddress );
+                    startActivity ( i );
                     Toast.makeText(IpAddressActivity.this, "Connecting to: " + ipAddress, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(IpAddressActivity.this, "Please enter an IP address", Toast.LENGTH_SHORT).show();
